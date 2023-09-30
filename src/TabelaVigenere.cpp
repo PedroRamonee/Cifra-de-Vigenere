@@ -31,11 +31,14 @@ void TabelaVigenere ::imprimeTabela() {
             cout << Tabela[i][j] << " ";
         }
     }
+    cout << "\n\n\n" << endl;
 }
 
 void TabelaVigenere ::criptografar(string &palavra, string chave) {
     string troca = palavra;
     int controle = 0;
+
+    cout << "Palavra original: " << palavra << endl;
 
     for (int i = 0; i < palavra.size(); i++) {
         if (palavra[i] != ' ') {
@@ -48,6 +51,8 @@ void TabelaVigenere ::criptografar(string &palavra, string chave) {
             troca[i] = palavra[i];
         }
     }
+
+    cout << "Chave cifrada: " << troca << endl;
 
     string aux = palavra;
 
