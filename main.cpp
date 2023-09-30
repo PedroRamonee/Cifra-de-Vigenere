@@ -30,12 +30,10 @@ int main(int argc, char const *argv[]) {
 
     // tabela.imprimeTabela();
     if (controle == 1) {
-
         tabela.criptografar(palavra, chave);
 
         cout << "Palavra criptografada em vigenere: " << palavra << endl;
     } else if (controle == 2) {
-        
         tabela.descriptografar(palavra, chave);
 
         cout << "Palavra descriptografada em vigenere: " << palavra << endl;
