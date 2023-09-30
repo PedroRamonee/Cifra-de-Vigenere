@@ -6,6 +6,8 @@ int main(int argc, char const *argv[]) {
     string palavra;
     string chave;
 
+    int controle = 0;
+
     cout << "Digite a palavra/frase a ser criptografada ou descriptografada:"
          << endl;
 
@@ -22,15 +24,23 @@ int main(int argc, char const *argv[]) {
         chave[i] = tolower(chave[i]);
     }
 
+    cout << "Digite:\n 1 para criptografar\n 2 para descriptografar" << endl;
+
+    cin >> controle;
+
     // tabela.imprimeTabela();
+    if (controle == 1) {
 
-    tabela.criptografar(palavra, chave);
+        tabela.criptografar(palavra, chave);
 
-    cout << "Palavra criptografada em vigenere: " << palavra << endl;
+        cout << "Palavra criptografada em vigenere: " << palavra << endl;
+    } else if (controle == 2) {
+        
+        tabela.descriptografar(palavra, chave);
 
-    tabela.descriptografar(palavra, chave);
-
-    cout << "Palavra descriptografada em vigenere: " << palavra << endl;
-
+        cout << "Palavra descriptografada em vigenere: " << palavra << endl;
+    } else {
+        cout << "Chave invalida" << endl;
+    }
     return 0;
 }
